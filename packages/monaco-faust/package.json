@@ -1,0 +1,11 @@
+{
+  "name": "@bide/monaco-faust",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./src/register.ts",
+  "types": "./src/register.ts",
+  "dependencies": {
+    "@grame/faustwasm": "^0.16.3",
+    "monaco-editor": "^0.45.0"
+  }
+}

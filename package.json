@@ -1,0 +1,13 @@
+{
+  "name": "bide-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter @bide/web dev",
+    "build": "pnpm --filter @bide/web build",
+    "dist": "pnpm --filter @bide/web dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
