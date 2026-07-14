@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "pnpm --filter @bide/web dev",
     "build": "pnpm --filter @bide/web build",
-    "dist": "pnpm --filter @bide/web dist"
+    "dist": "pnpm --filter @bide/web dist",
+    "sync": "npx -y @remix-project/remixd -s ../DAWDevOps/packages/hardhat --remix-url https://remix.ethereum.org"
   },
   "devDependencies": {
     "typescript": "^5.0.0"

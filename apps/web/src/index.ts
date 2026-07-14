@@ -265,6 +265,35 @@ $(async () => {
         }
     });
 
+    // View selector toggles for Faust DSP / Solidity Contract IDE
+    $("#tab-dsp").on("click", (e) => {
+        e.preventDefault();
+        $("#tab-dsp").addClass("active").css("color", "#00d4ff");
+        $("#tab-solidity").removeClass("active").css("color", "#aaa");
+        
+        // Show Faust layout
+        $("#left").show();
+        $("#top").show();
+        $("#bottom").show();
+        $("#solidity-container").hide();
+        
+        if (editor) {
+            editor.layout();
+        }
+    });
+
+    $("#tab-solidity").on("click", (e) => {
+        e.preventDefault();
+        $("#tab-solidity").addClass("active").css("color", "#00d4ff");
+        $("#tab-dsp").removeClass("active").css("color", "#aaa");
+        
+        // Hide Faust layout
+        $("#left").hide();
+        $("#top").hide();
+        $("#bottom").hide();
+        $("#solidity-container").show();
+    });
+
     editor.layout(); // Force editor to fill div
     // Editor and Diagram
     let editorDecoration: string[] = []; // lines with error
